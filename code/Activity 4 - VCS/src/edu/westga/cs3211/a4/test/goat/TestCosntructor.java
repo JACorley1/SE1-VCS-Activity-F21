@@ -18,5 +18,9 @@ class TestCosntructor {
 		);
 		
 	}
-
+	
+	@Test
+	void testInvalidAge() {
+		assertThrows(IllegalArgumentException.class, () -> new Goat(-5, true));
+	}
 }
