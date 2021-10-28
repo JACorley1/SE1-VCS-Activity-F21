@@ -2,6 +2,7 @@ package edu.westga.cs3211.a4.test.rabbit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import edu.westga.cs3211.a4.model.Rabbit;
@@ -37,8 +38,8 @@ public class TestConstructor {
 		
 		// ASSERT
 		Assertions.assertAll(
-            () -> assertEquals("Brown", testRabbit.getColor),
-            () -> assertEquals(false, testRabbit.getIsSpotted)
+            () -> assertEquals("Brown", testRabbit.GetColor()),
+            () -> assertEquals(false, testRabbit.IsSpotted())
     );
 	}
 

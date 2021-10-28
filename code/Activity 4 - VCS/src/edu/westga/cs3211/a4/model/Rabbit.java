@@ -45,6 +45,6 @@ public class Rabbit {
 	 * @return true if rabbit is spotted; false otherwise 
 	 */
 	public Boolean IsSpotted() {
-		return this.IsSpotted();
+		return this.isSpotted;
 	}
 }
