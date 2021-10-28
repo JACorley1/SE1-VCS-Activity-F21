@@ -6,10 +6,10 @@ public class Pig {
 	private int serialNumber;
 	
 	public Pig(String name, int serialNumber) {
-		if(this.name == null) {
+		if(name == null) {
 			throw new IllegalArgumentException("Name cant be null");
 		}
-		if(this.name.isEmpty()) {
+		if(name.isEmpty()) {
 			throw new IllegalArgumentException("Name cant be empty");
 		}
 		this.name = name;
@@ -20,6 +20,10 @@ public class Pig {
 	
 	public int getNumber() {
 		return this.serialNumber;
+	}
+	
+	public String getName() {
+		return this.name;
 	}
 
 }

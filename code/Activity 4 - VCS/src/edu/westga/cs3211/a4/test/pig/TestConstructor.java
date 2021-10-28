@@ -10,8 +10,27 @@ class TestConstructor {
 
 	@Test
 	void testInvalidName() {
-		Pig testPig = new Pig()
+		assertThrows(IllegalArgumentException.class,
+					()->{
+						new Pig(null, 0);
+					});
 		
+	}
+	
+	@Test
+	void testEmptyName() {
+		assertThrows(IllegalArgumentException.class,
+				()->{
+					new Pig("", 0);
+				});
+	}
+	
+	@Test
+	void testValidConstruction() {
+		String name = "myPig";
+		Pig myPig = new Pig(name, 100);
+		assertEquals(100, myPig.getNumber());
+		assertEquals("myPig", myPig.getName());
 	}
 
 }
