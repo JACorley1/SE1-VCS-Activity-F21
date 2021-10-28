@@ -7,7 +7,7 @@ public class Dragon {
     /**
      * Creates a dragon with a specified color and wingspan.
      * @param color The specified color
-     * @param windspan The specified wingspan
+     * @param wingspan The specified wingspan
      */
     public Dragon(String color, int wingspan) {
         this.color = color;
@@ -39,7 +39,7 @@ public class Dragon {
     }
 
     /**
-     * Sets the windspan.
+     * Sets the wingspan.
      * @param wingspan the new wingspan
      */
     public void setWingspan(int wingspan) {
