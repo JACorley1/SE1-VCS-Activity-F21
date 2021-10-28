@@ -21,4 +21,27 @@ public class Snake {
 		this.length = length;
 		this.venomous = isVenomous;
 	}
+
+
+	/**
+	 * Gets the length.
+	 *
+	 * @return the length
+	 */
+	public double getLength() {
+		return length;
+	}
+
+
+
+	/**
+	 * Checks if is venomous.
+	 *
+	 * @return true, if is venomous
+	 */
+	public boolean isVenomous() {
+		return venomous;
+	}
+
+	
 }
