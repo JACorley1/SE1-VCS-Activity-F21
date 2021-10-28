@@ -12,6 +12,4 @@ public class Snake {
 		this.length = length;
 		this.venomous = isVenomous;
 	}
-	
-	public 
 }
