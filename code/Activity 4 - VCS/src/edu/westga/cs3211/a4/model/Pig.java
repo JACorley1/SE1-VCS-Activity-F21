@@ -4,7 +4,14 @@ public class Pig {
 	
 	private String name;
 	private int serialNumber;
-	
+	/*
+	 * defines a pig object
+	 * @precondition - name!= null && !name.isEmpty()
+	 * 
+	 * @param name - the name of the pig
+	 * @param serialNumber - the pigs serial number
+	 * 
+	 */
 	public Pig(String name, int serialNumber) {
 		if(name == null) {
 			throw new IllegalArgumentException("Name cant be null");
