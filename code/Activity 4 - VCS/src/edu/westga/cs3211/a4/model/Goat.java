@@ -8,4 +8,12 @@ public class Goat {
 		this.age = goatAge;
 		this.isAlive = isAlive;
 	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public boolean isAlive() {
+		return isAlive;
+	}
 }
