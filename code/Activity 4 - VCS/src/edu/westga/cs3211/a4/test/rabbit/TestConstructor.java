@@ -4,11 +4,42 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class TestConstructor {
+import edu.westga.cs3211.a4.model.Rabbit;
+
+public class TestConstructor {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void testNullColor() {
+		// ASSERT
+		assertThrows(IllegalArgumentException.class,
+			()->{
+				//ACT
+				new Rabbit(null, true);
+			}
+		);
+	}
+	
+	@Test
+	public void testEmptyColor() {
+		// ASSERT
+		assertThrows(IllegalArgumentException.class,
+			()->{
+				//ACT
+				new Rabbit("", true);
+			}
+		);
+	}
+	
+	@Test
+	public void testValidConstruction() {
+		// ARRANGE
+		Rabbit testRabbit = new Rabbit("Brown", false);
+		
+		// ASSERT
+		Assertions.assertAll(
+            () -> assertEquals("Brown", testRabbit.getColor),
+            () -> assertEquals(false, testRabbit.getIsSpotted)
+    );
 	}
 
 }
