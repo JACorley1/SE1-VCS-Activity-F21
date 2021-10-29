@@ -54,4 +54,13 @@ public class Horse {
 
 		this.name = name;
 	}
+
+	/**
+	 * Checks to see if the Horse is vicious
+	 * 
+	 * @return true if the Horse is vicious; false otherwise
+	 */
+	public boolean isVicious() {
+		return this.isVicious;
+	}
 }
