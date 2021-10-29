@@ -21,6 +21,30 @@ public class Horse {
 	 * @param isVicious true if the Horse is vicious; false otherwise
 	 */
 	public Horse(String name, boolean isVicious) {
+		this.setName(name);
+		this.isVicious = isVicious;
+	}
+
+	/**
+	 * Gets the name of the Horse
+	 * 
+	 * @precondition none
+	 * 
+	 * @return the name of the Horse
+	 */
+	public String getName() {
+		return this.name;
+	}
+
+	/**
+	 * Sets the name of the Horse
+	 * 
+	 * @precondition name != null && !name.isEmpty()
+	 * @postcondition getName() == name
+	 * 
+	 * @param name the name of the Horse to set
+	 */
+	public void setName(String name) {
 		if (name == null) {
 			throw new IllegalArgumentException("The Horse's name cannot be null");
 		}
@@ -29,6 +53,5 @@ public class Horse {
 		}
 
 		this.name = name;
-		this.isVicious = isVicious;
 	}
 }
