@@ -13,15 +13,41 @@ class TestConstructor {
 		Ox ox = new Ox();
 		
 		assertEquals(ox.getOxYear(), 1997);
-		assertEquals(ox.getOxString(), "Fire");
+		assertEquals(ox.getOxType(), "Fire");
 	}
 	
 	@Test
 	void testConstructor() {
-		Ox ox = new Ox(2008, "Earth");
+		Ox ox = new Ox(1805, "Earth");
 		
-		assertEquals(ox.getOxYear(), 2008);
-		assertEquals(ox.getOxString(), "Earth");
+		assertEquals(ox.getOxYear(), 1805);
+		assertEquals(ox.getOxType(), "Earth");
+	}
+	
+	@Test
+	void testNullType() {
+		assertThrows(
+				IllegalArgumentException.class, ()->{
+					Ox ox = new Ox(2009, null);
+				});
+	}
+	
+	@Test
+	void testEmptyType() {
+		assertThrows(
+				IllegalArgumentException.class, ()->{
+					Ox ox = new Ox(2021, "");
+				});
 	}
 
+	@Test
+	void testInvalidYear() {
+		assertThrows(
+				IllegalArgumentException.class, ()->{
+					Ox ox = new Ox(1806, "Fire");
+				});
+	}
+	
+
+	
 }
