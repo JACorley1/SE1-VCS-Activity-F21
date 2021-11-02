@@ -6,10 +6,21 @@ public class Dragon {
 
     /**
      * Creates a dragon with a specified color and wingspan.
+     * @precondition: color != null && !color.isEmpty() && wingspan > 0
+     * @postcondition: this.getColor() == color && this.getWingspan() == wingspan
      * @param color The specified color
      * @param wingspan The specified wingspan
      */
     public Dragon(String color, int wingspan) {
+    	if (color == null) {
+    		throw new IllegalArgumentException("color must not be null");
+    	}
+    	if (color.isEmpty()) {
+    		throw new IllegalArgumentException("color must not be empty");
+    	}
+    	if (wingspan <= 0) {
+    		throw new IllegalArgumentException("wingspan must be positive");
+    	}
         this.color = color;
         this.wingspan = wingspan;
     }
