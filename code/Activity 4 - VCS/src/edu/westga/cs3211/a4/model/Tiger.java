@@ -24,7 +24,7 @@ public class Tiger {
 		if (color == null){
 			throw new IllegalArgumentException("color cannot be null");
 		}
-		if (color.isEmpty){
+		if (color.isEmpty()){
 			throw new IllegalArgumentException("color cannot be empty");
 		}
 		this.hasStripes = hasStripes;
