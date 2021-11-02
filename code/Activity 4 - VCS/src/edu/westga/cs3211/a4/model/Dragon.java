@@ -6,8 +6,8 @@ public class Dragon {
 
     /**
      * Creates a dragon with a specified color and wingspan.
-     * @precondition: color != null && !color.isEmpty() && wingspan > 0
-     * @postcondition: this.getColor() == color && this.getWingspan() == wingspan
+     * @precondition color != null && !color.isEmpty() && wingspan > 0
+     * @postcondition this.getColor() == color && this.getWingspan() == wingspan
      * @param color The specified color
      * @param wingspan The specified wingspan
      */
@@ -27,6 +27,8 @@ public class Dragon {
 
     /**
      * Gets the wing span.
+     * @precondition None
+     * @postcondition None
      * @return the wing span
      */
     public int getWingspan() {
@@ -35,7 +37,9 @@ public class Dragon {
 
     /**
      * Gets the color.
-     * @return
+     * @precondition None
+     * @postcondition None
+     * @return the color
      */
     public String getColor() {
         return this.color;
@@ -43,6 +47,8 @@ public class Dragon {
 
     /**
      * Sets the color.
+     * @precondition color != null && !color.isEmpty()
+     * @postcondition this.getColor() == color
      * @param color the new color
      */
     public void setColor(String color) {
@@ -57,6 +63,8 @@ public class Dragon {
 
     /**
      * Sets the wingspan.
+     * @precondition wingspan > 0
+     * @postcondition this.getWingspan() == wingspan
      * @param wingspan the new wingspan
      */
     public void setWingspan(int wingspan) {
