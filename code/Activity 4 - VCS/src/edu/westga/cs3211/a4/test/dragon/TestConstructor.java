@@ -16,5 +16,24 @@ class TestConstructor {
 				  ()-> assertEquals(5, toothLess.getWingspan())
 				);
 	}
-
+	
+	@Test
+	void testNullColor() {
+		assertThrows(IllegalArgumentException.class, () -> {new Dragon(null, 5);});
+	}
+	
+	@Test
+	void testEmptyColor() {
+		assertThrows(IllegalArgumentException.class, () -> {new Dragon("", 5);});
+	}
+	
+	@Test
+	void testNegativeWingspan() {
+		assertThrows(IllegalArgumentException.class, () -> {new Dragon("red", -5);});
+	}
+	
+	@Test
+	void testZeroWingspan() {
+		assertThrows(IllegalArgumentException.class, () -> {new Dragon("red", 0);});
+	}
 }
