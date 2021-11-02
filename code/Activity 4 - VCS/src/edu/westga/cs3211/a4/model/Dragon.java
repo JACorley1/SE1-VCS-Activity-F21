@@ -46,6 +46,12 @@ public class Dragon {
      * @param color the new color
      */
     public void setColor(String color) {
+    	if (color == null) {
+    		throw new IllegalArgumentException("color must not be null");
+    	}
+    	if (color.isEmpty()) {
+    		throw new IllegalArgumentException("color must not be empty");
+    	}
         this.color = color;
     }
 
@@ -54,6 +60,9 @@ public class Dragon {
      * @param wingspan the new wingspan
      */
     public void setWingspan(int wingspan) {
+    	if (wingspan <= 0) {
+    		throw new IllegalArgumentException("wingspan must be positive");
+    	}
         this.wingspan = wingspan;
     }
 }
