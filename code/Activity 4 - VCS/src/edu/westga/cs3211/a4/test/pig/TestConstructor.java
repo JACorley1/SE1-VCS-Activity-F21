@@ -5,9 +5,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import edu.westga.cs3211.a4.model.Pig;
-
+/*
+ * tests the constructor for the pig class
+ */
 class TestConstructor {
 
+	
 	@Test
 	void testInvalidName() {
 		assertThrows(IllegalArgumentException.class,
